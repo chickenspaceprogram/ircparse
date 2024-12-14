@@ -6,3 +6,19 @@
 
 #include <ircparse/ircparse.h>
 
+IrcMsg initIrcMsg(void) {
+    IrcMsg msg = {
+        .tags = NULL,
+        .num_tags = 0,
+        .server_name = NULL,
+        .nick = {'\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0'},
+        .user = NULL,
+        .host = NULL,
+        .command = NULL,
+        .params = NULL,
+        .num_params = 0,
+    }
+
+}
+
+IrcMsg freeIrcMsg(void);
